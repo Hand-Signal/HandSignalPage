@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases</title>
+    <link rel="stylesheet" href="Estilofrase.css">
+</head>
+<body>
+    
+    <a href="index.html"> 
+        <img src="IMAGENES/flecha.png" alt="Imagen Botón" class="button-left">
+    </a>
+
+    <div class="button-container">
+        <button onclick="mostrarImagen('IMAGENES/frase1.jpg', 'Hola')">Hola</button>
+        <button onclick="mostrarImagen('IMAGENES/frase2.jpeg', '¿Cómo estas?')">¿Cómo estas?</button>
+        <button onclick="mostrarImagen('IMAGENES/frase3.jpg', '¿Que hora es?')">¿Que hora es?</button>
+        <button onclick="mostrarImagen('IMAGENES/frase4.jpeg', 'Buenos días')">Buenos días</button>
+        <button onclick="mostrarImagen('IMAGENES/frase5.jpeg', 'Buenas tardes')">Buenas tardes</button>
+        <button onclick="mostrarImagen('IMAGENES/frase6.jpeg', 'Buenas noches')">Buenas noches</button>
+        <button onclick="mostrarImagen('IMAGENES/frase7.jpg', 'Por favor')">Por favor</button>
+        <button onclick="mostrarImagen('IMAGENES/frase8.jpg', 'Gracias')">Gracias</button>
+        <button onclick="mostrarImagen('IMAGENES/frase9.jpg', 'Adiós')">Adiós</button>
+    </div>
+
+    <div class="image-text-container">
+        <div id="image-cell">
+            <img src="" alt="Imagen seleccionada" id="selected-image">
+        </div>
+        <div id="text-cell">
+            Lenguajes de señas
+        </div>
+    </div>
+
+    <!-- IMAGEN ROBOT Y DIALOGO -->
+    <div class="image-dialog-container">
+        <div class="dialog-box">
+            Haz click en la frase que quieras
+        </div>
+        <div class="image-box">
+            <img src="IMAGENES/robot.gif" alt="Imagen con cuadro de diálogo">
+        </div>
+    </div>
+
+    <script src="javafrases.js"></script>
+</body>
+</html>

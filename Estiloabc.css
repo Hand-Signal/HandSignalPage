@@ -1,0 +1,201 @@
+/* Estilos generales */
+body { 
+    background-color: rgb(0, 0, 0); /* FONDO NEGRO */
+    font-family: Arial, sans-serif; /* FUENTE DEL TEXTO */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* CENTRADO VERTICAL */
+}
+
+.button-left {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+    width: 80px; 
+    height: 80px; 
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9 BOTONES POR FILA */
+    gap: 20px;
+    margin-bottom: 160px;
+    width: 90%; /* Ajustar el ancho de los botones */
+    max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+button {
+    padding: 8px 16px; /* Reducir el espacio de los botones */
+    font-size: 40px; /* Tamaño de letra más pequeño */
+    cursor: pointer; /* CAMBIO AL PASAR EL CURSOR, A LA MANO */
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(9, 6, 179);
+    color: white;
+}
+
+/* Estilo de imagen y su título */
+#display-area {
+    position: absolute; /* MOVER IMAGEN A DONDE QUERAMOS */
+    bottom: 20px; /* DISTANCIA DE BORDE */
+    right: 20px; /* DISTANCIA DEL BORDE DERECHO */
+    text-align: center;
+}
+
+#image {
+    width: 150px;
+    height: auto;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+#title {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    display: inline-block;
+    border: 3px solid white;
+    margin-top: -10px;
+    width: 170px;
+}
+
+.gif-container {
+    position: fixed; /* FIJAR EL GIF EN LA PANTALLA */
+    bottom: 0%;  
+    left: 20px;    /* LO UBICA EN LA PARTE IZQUIERDA */
+    display: flex;
+    flex-direction: column-reverse; /* iNVERTIR PARA QUE EL DIALOGO QUEDE ARRIBA */
+    align-items: center; 
+}
+
+/* Tamaño y espaciado del gif */
+.gif-imagen {
+    width: 210px;  /* TAMAÑO GIF */
+    height: auto;
+}
+
+/* Cuadro del diálogo */
+.dialogo-container {
+    position: relative;
+    margin-bottom: -30px; /* ESPACIO ENTRE DIALOGO Y ROBOT */
+}
+
+.dialogo {
+    padding: 10px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px; /* ESPACIO ENTRE LOS MARGENES DEL DIALOGO */
+}
+
+/* Triángulo del diálogo */
+.dialogo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent; /* TRIANGULO DEL DIALOGO */
+    left: 50%;
+}
+
+
+
+
+
+/* Media Queries */
+
+/*hasta 768px (móviles) */
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: repeat(4, 1fr); /* Menos botones por fila en pantallas pequeñas */
+        gap: 10px; /* Reducir el espacio entre los botones */
+        margin-bottom: 80px;
+        width: 100%; /* Asegurar que los botones ocupen todo el ancho */
+    }
+
+    button {
+        font-size: 30px; /* Tamaño de fuente ajustado para móviles */
+        padding: 10px 15px; /* Ajuste de padding para que no se vean tan grandes */
+    }
+
+    #image {
+        width: 120px; /* Reducir tamaño de imagen */
+    }
+
+    #title {
+        font-size: 16px; /* Reducir tamaño del título */
+        width: 140px;
+    }
+
+    .gif-imagen {
+        width: 150px;  /* Reducir tamaño del gif */
+        margin-top: 320px;
+    }
+
+    .dialogo {
+        font-size: 16px; /* Reducir tamaño del texto del diálogo */
+        padding: 8px;
+    }
+
+    .button-left {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/*  hasta 1024px (tabletas) */
+@media (max-width: 1024px) {
+    .button-container {
+        grid-template-columns: repeat(6, 1fr); /* 6 botones por fila */
+    }
+
+    button {
+        font-size: 40px; /* Tamaño de fuente ajustado para tabletas */
+        padding: 10px 20px;
+    }
+
+    #image {
+        width: 150px; /* Ajustar tamaño de imagen */
+    }
+
+    .gif-imagen {
+        width: 180px; /* Ajustar tamaño del gif */
+    }
+}
+
+/* escritorios */
+@media (min-width: 1200px) {
+    .button-container {
+        grid-template-columns: repeat(9, 1fr); /* Mantener 9 botones por fila */
+    }
+
+    button {
+        font-size: 45px; /* Tamaño de fuente ajustado para pantallas grandes */
+        padding: 12px 24px;
+    }
+
+    #image {
+        width: 200px; /* Ajuste del tamaño de imagen */
+    }
+
+    .gif-imagen {
+        width: 210px; /* Ajuste del tamaño del gif */
+    }
+}

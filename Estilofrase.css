@@ -1,0 +1,200 @@
+/* ESTILOS GENERALES */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000; /* Color de fondo */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+
+/* BOTONES */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espacio entre los botones */
+    max-width: 600px; /* Ancho máximo */
+    width: 100%;
+}
+
+/* ESTILO DE CADA BOTÓN */
+button {
+    background-color: black;
+    color: white;
+    border: 2px solid #6a1c68; /* Bordes morados */
+    border-radius: 5px;
+    padding: 20px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px; /* Tamaño mínimo del botón */
+    flex: 1 1 30%; /* Tamaño del botón */
+    max-width: 200px; /* El máximo que puede tener cada botón */
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+button:hover {
+    background-color: #6a1c68;
+    color: black;
+}
+
+/* IMAGEN DE REGRESAR A INICIO */
+.button-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px; /* Tamaño de la flecha */
+}
+
+/* IMAGEN Y TEXTO */
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espacio entre botones y texto */
+    width: 80%;
+    max-width: 600px;
+}
+
+#image-cell {
+    border: 2px solid #6a1c68; /* Bordes */
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* 100% ancho */
+}
+
+/* ESTILOS DE LAS IMÁGENES */
+#selected-image {
+    width: 300px; /* Ancho */
+    height: 200px; /* Alto */
+    object-fit: cover; /* Mantiene proporciones */
+    border-radius: 8px; /* Bordes */
+}
+
+/* ESTILO DE CELDA */
+#text-cell {
+    border: 2px solid #6a1c68; /* Borde morado */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px; /* Espacio entre imagen y celda */
+    font-size: 27px;
+    color: #ffffff;
+}
+
+/* ESTILO DE IMAGEN DE ROBOT */
+.image-box img {
+    width: 250px; /* Ancho */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.image-dialog-container {
+    position: fixed;
+    right: 20px; /* Para el borde derecho */
+    top: 50%; /* Centrado */
+    transform: translateY(-50%); /* Para que quede centrado verticalmente */
+    color: #ffffff;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+/* DIALOGO DEL ROBOT */
+.dialog-box {
+    padding: 10px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px; /* Espacio entre los márgenes del diálogo */
+}
+
+/* Triángulo del diálogo */
+.dialogo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
+    left: 50%;
+}
+
+
+/* Media Queries para responsividad */
+
+/* Para pantallas medianas y grandes */
+@media (max-width: 768px) {
+    .button-container {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    button {
+        flex: 1 1 45%;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    #text-cell {
+        font-size: 22px;
+    }
+
+    .image-box img {
+        max-width: 200px;
+    }
+
+    #selected-image {
+        max-width: 250px;
+    }
+
+    .image-dialog-container {
+        top: 10px;
+    }
+
+    .image-text-container {
+        flex-direction: column;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 480px) {
+    button {
+        flex: 1 1 100%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    #text-cell {
+        font-size: 18px;
+    }
+
+    .image-box img {
+        max-width: 150px;
+    }
+
+    #selected-image {
+        max-width: 200px;
+    }
+
+    .image-dialog-container {
+        top: 20px; /* Ajustado para asegurarse de que el robot quede arriba */
+        left: 50%;
+        transform: translateX(-50%); /* Centrado */
+        margin-top: 0;
+    }
+
+    .image-text-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    /* Mover un poco más abajo los botones */
+    .button-container {
+        margin-top: 250px; /* Separación adicional para mover las frases un poco más abajo */
+    }
+}

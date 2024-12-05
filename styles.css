@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(0, 0, 0); /* FONDO NEGRO */
+    font-family: Arial, sans-serif; /* FUENTE DEL TEXTO */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* CENTRADO VERTICAL */
+    overflow: hidden; /* EVITA LA BARRA DE DESPLAZAMIENTO */
+}
+
+h1 {
+    font-weight: normal; /* AYUDA A QUE SIGNAL NO ESTE EN NEGRITA */
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.no-bold {
+    font-weight: normal; /* PARA QUE SIGNAL NO ESTE EN NEGRITA */
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 10%; /* TEXTO A DERECHA*/
+    margin-right: 30%; /* MANTENER BALANCEADO EL TEXTO */
+    margin-top: 20px;
+}
+
+button {
+    padding: 20px 80px; /* ALTO Y ANCHO DEL BOTON */
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid blue; /* BORDE AZUL */
+    border-radius: 20px;
+    background-color: #000000; /* COLOR FONDO DE BOTON */
+    color: rgb(9, 6, 179); /* COLOR TEXTO DE BOTON */
+    margin-top: -30px; /* ESPACIADO ENTRE BOTONES */
+    transition: background-color 0.3s, color 0.3s; /* TRANSICIÓN PARA HOVER */
+    display: block; /* ADECUADO PARA CENTRAR LOS BOTONES, BLOQUEADA PARA QUE SE PUEDA CENTRAR BIEN */
+    margin-left: auto; /* CENTRADO DEL BOTON */
+    margin-right: auto; /* CENTRADO DEL BOTON */
+}
+
+button:hover {
+    background-color: rgb(9, 6, 179); /* COLOR AL PASAR MOUSE */
+    color: white; /* TEXTO AL PASAR MOUSE */
+}
+
+/* PIE DE PÁGINA, VAN LOS NOMBRES */
+footer {
+    display: flex;
+    flex-direction: column; /* ALINEA VERTICALMENTE */
+    justify-content: space-between; /* SEPARAR LOS ELEMENTOS */
+    width: 100%;
+    padding: 20px;
+    margin-top: -10px; /* AÑADE ESPACIO ENTRE CONTENIDO PRINCIPAL Y FOOTER */
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+    margin: 0; /* ELIMINA EL MARGEN */
+}
+
+/* CETIS A LA IZQUIERDA */
+footer .left {
+    text-align: left; /* Alineación a la izquierda */
+    margin-top: 10px;
+}
+
+/* NOMBRES A LA DERECHA */
+footer .right {
+    text-align: right; /* ALINEARLO A LA DERECHA */
+}
+
+/* RESPONSIVA */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start; /* CENTRADO PANTALLAS PEQUEÑAS */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 50px; /* REDUCIR EL TAMAÑO */
+    }
+
+    h2 {
+        font-size: 18px; /* REDUCIR TAMAÑO */
+    }
+
+    p {
+        font-size: 16px; /* AJUSTAR LOS PARRAFOS */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    button {
+        padding: 15px 50px; /* REDUCIR TAMAÑO BOTON */
+        font-size: 15px;
+    }
+
+    footer p {
+        font-size: 15px; /* REDUCIR TAMAÑO PIE PÁGINA */
+    }
+}
+
+/* MEDIDAS PARA TABLETAS, COMPUTADORAS, MAS GRANDES */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 70px; /* AJUSTAR TITULO */
+    }
+
+    button {
+        padding: 18px 70px; /* AJUSTAR BOTON */
+    }
+}
+
+/* PARA TAMAÑOS MAS GRANDES */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 90px; /* AJUSTE TAMAÑO */
+    }
+
+    button {
+        padding: 20px 100px; /* BOTONES MÁS GRANDES */
+    }
+}
